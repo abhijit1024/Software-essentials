@@ -1,4 +1,5 @@
-//Sorting method
+// Sorting method
+
 class Solution{
     public:
         bool hasDuplicate(vector<int>& nums) {
@@ -12,7 +13,7 @@ class Solution{
         }
 };
 
-//Hash table
+// Hash table
 
 class Solution{
     public:
