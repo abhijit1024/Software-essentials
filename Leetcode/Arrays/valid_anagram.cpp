@@ -36,10 +36,13 @@ public:
             count[c]++;
         }
         for(char c: t){
-            if(count.find(c) == count.end() || count[c] == 0){
+            if(count.find(c) == count.end()){
                 return false;
             }
             count[c]--;
+            if(count[c] == 0){
+                count.erase(c);
+            }
         }
         return true;
     }
