@@ -1,4 +1,8 @@
-// Sorting method
+/*
+    https://leetcode.com/problems/contains-duplicate/description/
+    Time complexity - O(nlogn)
+    Space complexity - O(1)
+*/
 
 class Solution{
     public:
@@ -13,7 +17,11 @@ class Solution{
         }
 };
 
-// Hash table
+/*  
+    Hash table
+    Time complexity - O(n)
+    Space complexity - O(n)
+*/
 
 class Solution{
     public:
@@ -30,7 +38,11 @@ class Solution{
         }
 };
 
-// Using Set
+/*
+    Hash set
+    Time complexity - O(n)
+    Space complexity - O(n)
+ */
 
 class Solution{
     public:

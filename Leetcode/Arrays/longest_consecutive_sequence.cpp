@@ -1,6 +1,8 @@
 /*
+    https://leetcode.com/problems/longest-consecutive-sequence/description/
     Sorting 
-    Time- O(nlogn)
+    Time complexity - O(nlogn)
+    Space complexity - O(1)
 */
 class Solution {
 public:
@@ -11,7 +13,7 @@ public:
 
         int max_count = 1, curr_max = 1;
         for(int i = 1; i < nums.size(); i++) {
-            if(nums[i]  == nums[i-1]+1){
+            if(nums[i]  == nums[i-1] + 1){
                 curr_max++;
             }
             else if (nums[i] != nums[i - 1]) {

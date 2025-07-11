@@ -1,4 +1,8 @@
-// Kadane algorithm
+/*
+    https://leetcode.com/problems/maximum-subarray/description/
+    Time complexity - O(n)
+    Space complexity - O(1)
+*/
 class Solution{
     public:
         int maxSubArray(vector<int>& nums) {
