@@ -1,6 +1,6 @@
 /*
-	Time complexity - O()
-	Space complexity - O()
+	Time complexity - O(n^2)
+	Space complexity - O(1)
 */
 vector<int> insertionSort(vector<int> arr) {
 	int j = 0;
