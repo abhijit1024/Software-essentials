@@ -32,3 +32,23 @@ public:
         return res;
     }
 };
+
+class Solution {
+private:
+    int dfs(TreeNode* node,int& max_depth) {
+        if(!node || !node->left && !node->right) {
+            return 0;
+        }
+        int left = dfs(node->left, max_depth);
+        int right = dfs(node->right, max_depth);
+        int dia = (node->left ? 1 : 0) + (node->right ? 1 : 0) + left + right;
+        max_depth = max(max_depth, dia);
+        return 1+ max(left, right);
+    }
+public:
+    int diameterOfBinaryTree(TreeNode* root) {
+        int dia = 0;
+        dfs(root, dia); 
+        return dia;
+    }
+};
