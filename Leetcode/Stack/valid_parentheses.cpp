@@ -1,5 +1,7 @@
 /*
     https://leetcode.com/problems/valid-parentheses/description/
+    Time complexity - O(n)
+    Space complexity - O(n)
 */
 class Solution {
 public:
