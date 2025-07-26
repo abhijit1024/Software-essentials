@@ -1,3 +1,8 @@
+/*
+    https://leetcode.com/problems/binary-tree-right-side-view/description/
+    Time complexity - O(n)
+    Space complexity - O(n)
+*/
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -12,28 +17,26 @@
 
 class Solution {
 public:
-    vector<vector<int>> levelOrder(TreeNode* root) {
-        vector<vector<int>> res;
-        if(!root) 
-            return res;
+    vector<int> rightSideView(TreeNode* root) {
+        vector<int> res;
         queue<TreeNode*> q;
         q.push(root);
 
         while(!q.empty()) {
-            vector<int> level;
-            int size = q.size();
-            
-            for(int i = 0; i < size; ++i) {
+            TreeNode* rightSide = nullptr;
+            int len = q.size();
+
+            for(int i = 0; i < len; i++) {
                 TreeNode* node = q.front();
                 q.pop();
                 if(node) {
-                    level.push_back(node->val);
+                    rightSide = node;
                     q.push(node->left);
                     q.push(node->right);
                 }
             }
-            if(!level.empty()) {
-                res.push_back(level);
+            if(rightSide) {
+                res.push_back(rightSide->val);
             }
         }
         return res;
