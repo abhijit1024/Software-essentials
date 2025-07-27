@@ -1,7 +1,7 @@
 /*  
     https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
     Time complexity - O(n)
-    Space complexity - O(1)
+    Space complexity - O(m)
 */
 class Solution {
 public:
