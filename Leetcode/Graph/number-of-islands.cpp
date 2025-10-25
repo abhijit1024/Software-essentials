@@ -22,16 +22,19 @@ public:
         return islands;
     }
     void dfs(vector<vector<char>>&grid, int r, int c) {
-        if(r < 0 || c < 0 || r >= grid.size() || c >= grid[0].size()
-            || grid[r][c] == '0') {
+        //Base condition
+        if(r < 0 || r >= grid.size() ||
+            c < 0 || c >= grid[0].size() ||
+            grid[r][c] == '0') {
                 return ;
             }
+        //Mark as visited 
         grid[r][c] = '0';
-        for(int i = 0; i < grid.size(); i++) {
-            dfs(grid, r + 1, c);
-            dfs(grid, r, c + 1);
-            dfs(grid, r - 1, c);
-            dfs(grid, r, c - 1);
-        }
+        //Check neighbors
+        dfs(grid, r + 1, c);
+        dfs(grid, r, c + 1);
+        dfs(grid, r - 1, c);
+        dfs(grid, r, c - 1);
+        
     }
 };
