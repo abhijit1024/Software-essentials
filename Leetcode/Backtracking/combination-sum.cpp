@@ -1,7 +1,11 @@
 /*
     https://leetcode.com/problems/combination-sum/description/
-    TC - 
-    SC - 
+    TC: O(n ^ (target / min el of candidates)), in each recursive call, n calls are
+    made and the depth is equal to max number of elements in the subset that sum to target,
+    which is target / min el of candidates
+    SC: O(target / min el of candidates), worst case scenario is when the
+        smallest element is used to sum upto target. 
+        eg target=3, [1,4] => [1,1,1]
 */
 class Solution {
 public:
